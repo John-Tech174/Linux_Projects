@@ -126,7 +126,7 @@ function main () {
     declare packets_number=0
     declare -i http_packets=0
     declare -i tls_packets=0
-    declare -i arg_num="$#"
+    declare -i arg_num="$2"
 
     if (( arg_num != 1 )); then
         echo "Invalid number of arguments, please provide the path of a .pcap file e.g: /path/to/filename.pcap"
@@ -156,4 +156,4 @@ function main () {
     exit 0
 }
 
-main "$1"
+main "$1" "$#"
